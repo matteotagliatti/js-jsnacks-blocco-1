@@ -1,13 +1,12 @@
 const output = document.getElementById("output");
-const numeri = [];
-const numeriDispari = [];
+const numbers = [];
 
 for (let i = 0; i < 6; i++) {
-  numeri[i] = parseInt(prompt(`numero ${i}?`));
+  const num = parseInt(prompt(`numero ${i}?`));
 
-  if (numeri[i] % 2 !== 0) {
-    numeriDispari.push(numeri[i]);
+  if (num % 2 !== 0) {
+    numbers.push(num);
   }
 }
 
-output.innerHTML = numeriDispari.join(", ");
+output.innerHTML = numbers.join(", ");
